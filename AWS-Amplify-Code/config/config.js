@@ -35,7 +35,7 @@ window._workshopConfig = {
 window._configLoaded = true;
 
 // Yash Academy Branding
-window._avizAcademy = {
+window._YashAcademy = {
   instructor: 'Yaswanth Reddy Arumulla',
   academy: 'Yash Academy',
   youtube: 'https://www.youtube.com/@Yashacademy0',
