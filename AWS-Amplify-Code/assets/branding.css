@@ -1,13 +1,37 @@
-/* Yash Academy Branding Overrides */
+/* -------------------------------------------------
+   branding.css – Premium UI for AI Image Editing
+   ------------------------------------------------- */
 
-/* Custom color scheme inspired by Yash Academy */
+/* Reset & base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--text-primary);
+  background: var(--primary-bg);
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* Color palette */
 :root {
-  --primary-bg: #0f0c29;
-  /* deep dark */
-  --secondary-bg: #302b63;
+  --primary-bg: #0a0a0f;
+  /* deep night */
+  --secondary-bg: #1a1a2e;
   /* dark indigo */
   --accent-cyan: #00f5d4;
+  /* bright cyan */
   --accent-purple: #9d4edd;
+  /* vivid violet */
   --success-green: #00e676;
   --warning-amber: #ffb400;
   --error-red: #ff1744;
@@ -15,72 +39,172 @@
   --text-secondary: #c0c0c0;
   --glass-bg: rgba(255, 255, 255, 0.12);
   --glass-border: rgba(255, 255, 255, 0.2);
+  --font-mono: 'Courier New', monospace;
 }
 
-/* Header branding */
-.terminal-header h1::before {
-  content: "";
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-image: url('/logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  vertical-align: middle;
-  margin-right: 15px;
-  filter: brightness(1.2) contrast(1.1);
+/* Typography */
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5rem;
 }
 
-/* Footer branding */
-body::after {
-  content: "Powered by Aviz Academy | Instructor: Avinash Reddy Thipparthi";
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+h1 {
+  font-size: 2.5rem;
+  color: var(--accent-cyan);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--accent-cyan);
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--accent-purple);
+}
+
+p {
+  margin-bottom: 1rem;
   color: var(--text-secondary);
-  text-align: center;
-  z-index: 1000;
-  padding: 8px 16px;
-  background: rgba(26, 26, 46, 0.9);
-  border: 1px solid var(--accent-cyan);
-  border-radius: 4px;
-  backdrop-filter: blur(10px);
 }
 
-/* Social links container */
-.social-links {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 12px;
-  z-index: 1000;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: rgba(26, 26, 46, 0.9);
-  border: 1px solid var(--accent-cyan);
-  border-radius: 50%;
+a {
   color: var(--accent-cyan);
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  transition: color .3s;
 }
 
-.social-link:hover {
-  background: rgba(0, 212, 255, 0.2);
-  box-shadow: 0 0 15px var(--accent-cyan);
+a:hover {
+  color: var(--accent-purple);
+}
+
+/* Layout */
+.site-header {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  background: var(--accent-purple);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background .3s, transform .2s;
+}
+
+.cta-button:hover {
+  background: var(--accent-cyan);
   transform: translateY(-2px);
+}
+
+/* Sections */
+.section {
+  padding: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-item p {
+  font-size: .95rem;
+}
+
+/* Form */
+.image-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.image-form label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.image-form input,
+.image-form select,
+.image-form button {
+  padding: .5rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.image-form button {
+  background: var(--accent-cyan);
+  color: #fff;
+  cursor: pointer;
+}
+
+.image-form button:hover {
+  background: var(--accent-purple);
+}
+
+/* Result area */
+.result-area {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.result-area img {
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, .2);
+  color: var(--text-secondary);
 }
 
 /* Branding badge */
@@ -97,7 +221,7 @@ body::after {
   border-radius: 8px;
   backdrop-filter: blur(10px);
   z-index: 1000;
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 212, 255, .3);
 }
 
 .branding-badge img {
@@ -118,7 +242,7 @@ body::after {
 
 .branding-badge .badge-title {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: .9rem;
   font-weight: 700;
   color: var(--accent-cyan);
   text-shadow: 0 0 10px var(--accent-cyan);
@@ -126,12 +250,85 @@ body::after {
 
 .branding-badge .badge-subtitle {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: .7rem;
   color: var(--text-secondary);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Social links */
+.social-links {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(26, 26, 46, 0.9);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 50%;
+  color: var(--accent-cyan);
+  font-size: 1.2rem;
+  transition: all .3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  background: rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 15px var(--accent-cyan);
+  transform: translateY(-2px);
+}
+
+/* Footer text */
+body::after {
+  content: "Powered by Aviz Academy | Instructor: Avinash Reddy Thipparthi";
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  background: rgba(26, 26, 46, 0.9);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+
+/* Glassmorphism utility */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, .5);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
   .branding-badge {
     top: 10px;
     left: 10px;
@@ -141,14 +338,6 @@ body::after {
   .branding-badge img {
     width: 32px;
     height: 32px;
-  }
-
-  .branding-badge .badge-title {
-    font-size: 0.8rem;
-  }
-
-  .branding-badge .badge-subtitle {
-    font-size: 0.65rem;
   }
 
   .social-links {
@@ -164,37 +353,8 @@ body::after {
   }
 
   body::after {
-    font-size: 0.65rem;
+    font-size: .65rem;
     padding: 6px 12px;
     bottom: 5px;
   }
-
-  .terminal-header h1::before {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/* Adjust main content to avoid overlap with fixed elements */
-.terminal-app {
-  padding-top: calc(var(--spacing-lg) + 60px);
-  padding-bottom: calc(var(--spacing-lg) + 50px);
-}
-
-@media (max-width: 768px) {
-  .terminal-app {
-    padding-top: calc(var(--spacing-md) + 50px);
-    padding-bottom: calc(var(--spacing-md) + 40px);
-  }
-}
-
-/* Glassmorphism utility */
-.glass-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  margin: 1rem 0;
 }
