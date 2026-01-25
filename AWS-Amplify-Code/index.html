@@ -5,101 +5,20 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Premium AI Image Editing Web App – built with AWS Amplify and Bedrock." />
+  <meta name="description"
+    content="AWS Image Editing Tool by Yash Academy - Learn cloud computing with hands-on workshops" />
   <meta name="author" content="Yaswanth Reddy Arumulla - Yash Academy" />
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://sdk.amazonaws.com/js/aws-sdk-2.244.1.min.js https://*.amazonaws.com https://*.amazon.com 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https://*.amazonaws.com https://*.amazon.com; img-src 'self' data: blob:; upgrade-insecure-requests;" />
-  <title>AI Image Editing – Yash Academy</title>
-
-  <!-- Core JS (your compiled app) -->
+    content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://sdk.amazonaws.com/js/aws-sdk-2.244.1.min.js https://*.amazonaws.com https://*.amazon.com 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https://*.amazonaws.com https://*.amazon.com; img-src 'self' data: blob:; upgrade-insecure-requests;">
+  <title>AI Image Editing Web App AWS | Yash Academy</title>
   <script type="module" crossorigin src="/assets/index-7vDF1VVo.js"></script>
-  <!-- Custom UI script -->
-  <script defer src="/assets/app.js"></script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/assets/branding.css" />
-  <link rel="stylesheet" href="/assets/main.css" />
+  <link rel="stylesheet" crossorigin href="/assets/index-CgpiPr61.css">
+  <link rel="stylesheet" href="/assets/branding.css">
 </head>
 
 <body>
-  <!-- Branding badge & social links injected by branding.js -->
   <div id="root"></div>
-
-  <header class="site-header">
-    <nav class="nav-bar">
-      <a class="logo" href="/">
-        <img src="/logo.png" alt="Yash Academy Logo" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#demo">Demo</a></li>
-        <li><a href="#docs">Docs</a></li>
-      </ul>
-    </nav>
-    <section class="hero">
-      <div class="hero-content glass-card">
-        <h1>AI Image Editing – Powered by AWS Bedrock</h1>
-        <p class="tagline">Transform images, in‑paint, out‑paint and create stunning visuals with a single click.</p>
-        <a class="cta-button" href="#demo">Try the Demo</a>
-      </div>
-    </section>
-  </header>
-
-  <main class="site-main">
-    <section id="features" class="section glass-card">
-      <h2>Why This Tool?</h2>
-      <div class="feature-grid">
-        <div class="feature-item">
-          <h3>⚡ Fast & Scalable</h3>
-          <p>Runs on AWS Bedrock – no local GPU needed.</p>
-        </div>
-        <div class="feature-item">
-          <h3>🎨 Rich Editing Modes</h3>
-          <p>In‑painting, out‑painting, style transfer and more.</p>
-        </div>
-        <div class="feature-item">
-          <h3>🔐 Secure & Private</h3>
-          <p>All data stays within your AWS account.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="demo" class="section glass-card">
-      <h2>Live Demo</h2>
-      <div class="demo-container">
-        <form id="image-form" class="image-form">
-          <label for="prompt">Prompt:</label>
-          <input type="text" id="prompt" name="prompt" placeholder="Describe what you want..." required />
-
-          <label for="mode">Mode:</label>
-          <select id="mode" name="mode">
-            <option value="INPAINTING">In‑painting</option>
-            <option value="OUTPAINTING">Out‑painting</option>
-            <option value="TEXT2IMG">Text‑to‑Image</option>
-          </select>
-
-          <label for="base-image">Base Image (optional):</label>
-          <input type="file" id="base-image" accept="image/*" />
-
-          <label for="mask-image">Mask Image (optional):</label>
-          <input type="file" id="mask-image" accept="image/*" />
-
-          <button type="submit" class="cta-button">Generate</button>
-        </form>
-        <div id="result" class="result-area"></div>
-      </div>
-    </section>
-
-    <section id="docs" class="section glass-card">
-      <h2>Documentation</h2>
-      <p>Check the <a href="https://github.com/your-repo" target="_blank" rel="noopener">GitHub repository</a> for API
-        details, deployment instructions, and contribution guidelines.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2026 Yash Academy – All rights reserved.</p>
-  </footer>
+  <script src="/assets/branding.js"></script>
 </body>
 
 </html>
