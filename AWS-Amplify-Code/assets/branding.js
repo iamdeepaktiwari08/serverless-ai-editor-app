@@ -40,8 +40,8 @@
     if (terminalHeader && !terminalHeader.textContent.includes('Yash Academy')) {
       // Store original text and update
       const originalText = terminalHeader.textContent;
-      if (originalText.includes('Mastering AWS') || originalText.includes('Image Editing')) {
-        terminalHeader.textContent = 'Mastering AWS - Image Editing Tool';
+      if (originalText.includes('AI Image Editing Web App AWS') || originalText.includes('Image Editing')) {
+        terminalHeader.textContent = 'AI Image Editing Web App AWS - Yash Academy';
       }
     }
 
