@@ -38,3 +38,4 @@ The application uses a serverless architecture built on AWS:
   - AWS Amplify
 - Node.js and npm (for local development)
 - AWS CLI configured with appropriate credentials
+# serverless-ai-editor-app
