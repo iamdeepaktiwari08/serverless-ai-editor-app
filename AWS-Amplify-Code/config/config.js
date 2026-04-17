@@ -22,9 +22,9 @@
 
 window._workshopConfig = {
   cognito: {
-    userPoolId: 'us-east-1_YPDZRdsQX, // e.g. us-west-2_uXboG5pAb
+    userPoolId: 'us-east-1_YPDZRdsQX', // e.g. us-west-2_uXboG5pAb
     userPoolClientId: '7sls874uevvimat21d59i4ofq1', // e.g. 25ddkmj4v6hfsfvruhpfi7n4hv
-    region: 'ap-south-1' // e.g. us-west-2
+    region: 'us-east-1' // e.g. us-west-2
   },
   api: {
     invokeUrl: 'https://g71axlgfh1.execute-api.us-east-1.amazonaws.com/prod'  
